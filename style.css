@@ -1,0 +1,97 @@
+body {
+    font-family: Arial, sans-serif;
+    text-align: center;
+    padding: 20px;
+    background-color: #f4f4f4;
+    color: #333;
+}
+
+.header {
+    text-align: center;
+    margin-bottom: 20px;
+}
+
+.logo {
+    width: 100px;
+    height: auto;
+    display: block;
+    margin: 0 auto;
+}
+
+.hidden {
+    display: none;
+}
+
+.welcome {
+    margin: 20px auto;
+    background-color: #2196F3;
+    color: white;
+    padding: 20px;
+    border-radius: 8px;
+    max-width: 600px;
+}
+
+.buttons {
+    margin: 20px auto;
+    display: flex;
+    justify-content: center;
+    gap: 10px;
+}
+
+.buttons button {
+    background-color: #4CAF50;
+    color: white;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+.buttons button:hover {
+    background-color: #45a049;
+}
+
+.content {
+    margin: 20px auto;
+    padding: 20px;
+    border-radius: 8px;
+    max-width: 800px;
+    background-color: #f9f9f9;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+.details {
+    margin-top: 10px;
+    background-color: #e0e0e0;
+    padding: 10px;
+    border-radius: 5px;
+}
+
+table {
+    margin: 20px auto;
+    border-collapse: collapse;
+    width: 100%;
+    background-color: white;
+}
+
+table, th, td {
+    border: 1px solid #ccc;
+}
+
+th, td {
+    padding: 10px;
+    text-align: left;
+}
+
+.print-button {
+    background-color: #4CAF50;
+    color: white;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+.print-button:hover {
+    background-color: #45a049;
+}

@@ -1,0 +1,188 @@
+<!DOCTYPE html>
+<html lang="en" >
+<head>
+  <meta charset="UTF-8">
+  <title>CodePen - A Pen by Dahberrou</title>
+  <link rel="stylesheet" href="./style.css">
+
+</head>
+<body>
+<!-- partial:index.partial.html -->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Mustapha Protofill</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <div class="header">
+        <img src="logo.png" alt="Logo" class="logo">
+        <h1>Mustapha Protofill</h1>
+    </div>
+    <div class="welcome">
+        <h2>Welcome to my website</h2>
+        <p>This website gives you a general overview of me in my field of study and achievements. My name is Mustapha. I am 21 years old, a student at Nusa Putra in IT.</p>
+    </div>
+    <div class="buttons">
+        <button onclick="showContent('studyList')">Study List</button>
+        <button onclick="showContent('achievementsList')">List of My Achievements</button>
+        <button onclick="showContent('conferencesList')">Conferences</button>
+        <button onclick="showContent('addJobOffer')">Add a Job Offer</button>
+        <button onclick="showContent('jobOffers')">Job Offers List</button>
+    </div>
+    <div id="studyList" class="content hidden">
+        <h2>Study List</h2>
+        <ul>
+            <li>
+                <strong>Coursework in Computer Science:</strong>
+                <ul>
+                    <li>Algorithms</li>
+                    <li>Data Structures</li>
+                    <li>Web Development</li>
+                    <li>Software Engineering</li>
+                </ul>
+                <button onclick="toggleDetails('courseDetails')">Details</button>
+                <div id="courseDetails" class="details hidden">
+                    <p>Date: June 2023 - Present</p>
+                    <p>Location: Nusa Putra University, Indonesia</p>
+                </div>
+            </li>
+            <li>
+                <strong>Participation:</strong>
+                <ul>
+                    <li>Coding bootcamps</li>
+                    <li>Hackathons</li>
+                </ul>
+                <button onclick="toggleDetails('participationDetails')">Details</button>
+                <div id="participationDetails" class="details hidden">
+                    <p>Date: Various dates</p>
+                    <p>Location: Various locations</p>
+                </div>
+            </li>
+            <li>
+                <strong>University Tech Club:</strong>
+                <ul>
+                    <li>Collaborative projects</li>
+                    <li>Tech events</li>
+                </ul>
+                <button onclick="toggleDetails('techClubDetails')">Details</button>
+                <div id="techClubDetails" class="details hidden">
+                    <p>Date: Ongoing</p>
+                    <p>Location: Nusa Putra University, Indonesia</p>
+                </div>
+            </li>
+        </ul>
+    </div>
+    <div id="achievementsList" class="content hidden">
+        <h2>List of My Achievements</h2>
+        <ul>
+            <li>
+                <strong>Web Application Development:</strong>
+                <p>Developed a full-stack web application for managing university events, used by over 500 students.</p>
+                <button onclick="toggleDetails('webAppDetails')">Details</button>
+                <div id="webAppDetails" class="details hidden">
+                    <p>Date: 2022</p>
+                    <p>Location: Nusa Putra University, Indonesia</p>
+                </div>
+            </li>
+            <li>
+                <strong>Hackathon Winner:</strong>
+                <p>Winner of the university hackathon in 2023: Innovative campus navigation solution.</p>
+                <button onclick="toggleDetails('hackathonDetails')">Details</button>
+                <div id="hackathonDetails" class="details hidden">
+                    <p>Date: 2023</p>
+                    <p>Location: Nusa Putra University, Indonesia</p>
+                </div>
+            </li>
+            <li>
+                <strong>Cloud Computing Certification:</strong>
+                <p>Completed a professional certification in Cloud Computing from Coursera.</p>
+                <button onclick="toggleDetails('cloudCertDetails')">Details</button>
+                <div id="cloudCertDetails" class="details hidden">
+                    <p>Date: 2021</p>
+                    <p>Location: Online</p>
+                </div>
+            </li>
+            <li>
+                <strong>Tech Internship:</strong>
+                <p>Internship at a leading tech company: Contributed to a key product feature development.</p>
+                <button onclick="toggleDetails('internshipDetails')">Details</button>
+                <div id="internshipDetails" class="details hidden">
+                    <p>Date: 2022</p>
+                    <p>Location: XYZ Tech Company</p>
+                </div>
+            </li>
+        </ul>
+    </div>
+    <div id="conferencesList" class="content hidden">
+        <h2>Conferences</h2>
+        <ul>
+            <li>
+                <strong>Web Development Conference 2023</strong>
+                <p>Place: San Francisco, CA</p>
+                <p>Time: March 10-12, 2023</p>
+            </li>
+            <li>
+                <strong>Cloud Computing Summit 2024</strong>
+                <p>Place: New York, NY</p>
+                <p>Time: June 15-17, 2024</p>
+            </li>
+            <li>
+                <strong>AI & Machine Learning Expo 2022</strong>
+                <p>Place: Los Angeles, CA</p>
+                <p>Time: October 5-7, 2022</p>
+            </li>
+        </ul>
+    </div>
+    <div id="addJobOffer" class="content hidden">
+        <h2>Add a Job Offer</h2>
+        <form id="jobOfferForm">
+            <label for="companyNumber">Company Number:</label>
+            <input type="text" id="companyNumber" name="companyNumber"><br>
+            <label for="companyAddress">Company Address:</label>
+            <input type="text" id="companyAddress" name="companyAddress"><br>
+            <label for="interviewDate">Interview Date:</label>
+            <input type="date" id="interviewDate" name="interviewDate"><br>
+            <label for="phone">Phone:</label>
+            <input type="text" id="phone" name="phone"><br>
+            <label for="natureOfWork">Nature of Work:</label>
+            <input type="text" id="natureOfWork" name="natureOfWork"><br>
+            <label for="workType">Work Type:</label>
+            <select id="workType" name="workType">
+                <option value="remote">Remote</option>
+                <option value="office">Office</option>
+            </select><br>
+            <button type="button" onclick="addJobOffer()">Save</button>
+            <button type="reset">Reset</button>
+        </form>
+    </div>
+    <div id="jobOffers" class="content hidden">
+        <h2>Job Offers List</h2>
+        <table id="jobOffersTable">
+            <thead>
+                <tr>
+                    <th>Company Number</th>
+                    <th>Company Address</th>
+                    <th>Interview Date</th>
+                    <th>Phone</th>
+                    <th>Nature of Work</th>
+                    <th>Work Type</th>
+                    <th>Actions</th>
+                </tr>
+            </thead>
+            <tbody>
+            </tbody>
+        </table>
+        <div id="jobOfferCount">Total Job Offers: 0</div>
+        <button class="print-button" onclick="printJobOffers()">Print</button>
+    </div>
+    <script src="script.js"></script>
+</body>
+</html>
+<!-- partial -->
+  <script  src="./script.js"></script>
+
+</body>
+</html>
